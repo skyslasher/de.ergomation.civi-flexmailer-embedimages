@@ -4,7 +4,7 @@ This plugin embeds images in HTML e-mails (HTML inline images) instead of linkin
 CiviCRM trackers will be left untouched.
 This increases the e-mail size, but images are displayed images in the e-mail client right away,
 even when autoloading images is turned off on the client side (what is the new default setting nowadays).
-It also has the option to embed only locally hosted images, what can be useful for copyright questions.
+It also has the option to embed only locally hosted images, what can be useful for copyright reasons.
 
 This plugin is one of the successors of the
 [Wordpress integration for CiviMail with Mosaico plugin](https://github.com/skyslasher/de.ergomation.wp-civi-mosaico)
