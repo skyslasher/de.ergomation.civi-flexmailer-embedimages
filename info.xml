@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<extension key="de.ergomation.civi-flexmailer-embedimages" type="module">
+  <file>civi_flexmailer_embedimages</file>
+  <name>FlexMailer HTML Inline Images</name>
+  <description>Embed images in HTML e-mails instead of linking to them</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Andreas Hahn</author>
+    <email>civicrm@ergomation.de</email>
+  </maintainer>
+  <urls>
+    <url desc="Main Extension Page">https://github.com/skyslasher/de.ergomation.civi-flexmailer-embedimages</url>
+    <url desc="Documentation">https://github.com/skyslasher/de.ergomation.civi-flexmailer-embedimages</url>
+    <url desc="Support">https://github.com/skyslasher/de.ergomation.civi-flexmailer-embedimages</url>
+    <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
+  </urls>
+  <releaseDate>2021-01-22</releaseDate>
+  <version>1.0</version>
+  <develStage>beta</develStage>
+  <compatibility>
+    <ver>5.0</ver>
+  </compatibility>
+  <comments>Not for productive use</comments>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/CiviFlexmailerEmbedimages</namespace>
+  </civix>
+</extension>

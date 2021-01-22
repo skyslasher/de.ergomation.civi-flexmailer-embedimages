@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/admin/flexmailer_embedimages</path>
+    <page_callback>CRM_CiviFlexmailerEmbedimages_Form_Settings</page_callback>
+    <title>Advanced E-Mail settings</title>
+    <access_arguments>access CiviMail</access_arguments>
+  </item>
+</menu>
