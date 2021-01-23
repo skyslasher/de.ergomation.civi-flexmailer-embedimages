@@ -15,6 +15,12 @@
     <td>{$form.civi_flexmailer_embedimageslocal.label} {help id=civi_flexmailer_embedimageslocal}</td>
     </td>
   </tr>
+  <tr class="crm-civi-flexmailer-form-block-flushcache">
+    <td class="label">
+      <a class="button" href="{crmURL p='civicrm/admin/flexmailer_embedimages' q="flush=1"}"><span>Flush image cache</span></a>
+    </td>
+    <td>{help id=civi_flexmailer_flushcache}</td>
+  </tr>
 </table>
 
 {* FOOTER *}

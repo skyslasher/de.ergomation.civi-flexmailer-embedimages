@@ -5,3 +5,6 @@
 {htxt id='civi_flexmailer_embedimageslocal'}
 {ts}If embedding is enabled, setting to yes embeds only locally hosted images.{/ts}
 {/htxt}
+{htxt id='civi_flexmailer_flushcache'}
+{ts}Flush cache if you experience weird renderings of embedded images.{/ts}
+{/htxt}

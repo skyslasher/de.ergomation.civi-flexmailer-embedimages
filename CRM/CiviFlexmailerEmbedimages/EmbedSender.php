@@ -285,7 +285,7 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
     if (!file_exists( $dir )) {
       return false;
     }
-   $files = array_diff( scandir( $dir ), array( '.', '..' ) );
+    $files = array_diff( scandir( $dir ), array( '.', '..' ) );
     foreach ( $files as $file ) {
       ( is_dir( "$dir" . DIRECTORY_SEPARATOR . "$file" ) ) ? self::delTree( "$dir" . DIRECTORY_SEPARATOR . "$file", true ) : unlink( "$dir" . DIRECTORY_SEPARATOR . "$file" );
     }
@@ -294,6 +294,14 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
     } else {
       return true;
     }
+  }
+
+  private static function getCacheRootDir() {
+    return CRM_Core_Config::singleton()->uploadDir . 'flexmailer_embed';
+  }
+
+  public static function flushCache() {
+    self::delTree( self::getCacheRootDir(), false );
   }
 
   public static function doEmbed( $message ) {
@@ -306,7 +314,7 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
       if ( !empty( $image_array ) ) {
         $message->setHTMLBody( $html_body );
         // every week a new cache directory
-        $CacheRootDir = CRM_Core_Config::singleton()->uploadDir . 'flexmailer_embed';
+        $CacheRootDir = self::getCacheRootDir();
         $CacheDir = $CacheRootDir . DIRECTORY_SEPARATOR . date( 'W' );
         if ( !file_exists( $CacheDir ) ) {
           // clean old cache dirs, create new
