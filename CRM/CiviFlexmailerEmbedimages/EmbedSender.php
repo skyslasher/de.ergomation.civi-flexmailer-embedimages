@@ -302,7 +302,7 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
 
     if ( $embedImages ) {
       $html_body = $message->getHTMLBody();
-      $image_array = self::scanHTMLforImages( $html_body );
+      $image_array = self::scanHTMLforImages( $html_body, $onlyLocal );
       if ( !empty( $image_array ) ) {
         $message->setHTMLBody( $html_body );
         // every week a new cache directory
