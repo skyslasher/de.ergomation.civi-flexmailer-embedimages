@@ -235,10 +235,8 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
           if ( array_key_exists('query', $img_src_parts)) {
             if ( false !== stripos( $img_src_parts[ 'query' ], "%2F" ) ) {
               $img_src_parts[ 'query' ] = urldecode( $img_src_parts[ 'query' ] );
-              $image->setAttribute( 'src',
-                $img_src_parts[ 'scheme' ] . '://' .
-                $img_src_parts[ 'host' ] . $img_src_parts[ 'path' ] . '?' . $img_src_parts[ 'query' ]
-              );
+              $img_src = $img_src_parts[ 'scheme' ] . '://' . $img_src_parts[ 'host' ] . $img_src_parts[ 'path' ] . '?' . $img_src_parts[ 'query' ];
+              $image->setAttribute( 'src', $img_src );
             }
           } else {
             $img_src_parts[ 'query' ] = '';
