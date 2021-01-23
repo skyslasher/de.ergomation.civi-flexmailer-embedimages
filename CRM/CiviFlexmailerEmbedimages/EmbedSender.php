@@ -282,6 +282,9 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
   }
 
   private static function delTree( $dir, $removeSelf = false ) {
+    if (!file_exists( $dir )) {
+      return false;
+    }
    $files = array_diff( scandir( $dir ), array( '.', '..' ) );
     foreach ( $files as $file ) {
       ( is_dir( "$dir" . DIRECTORY_SEPARATOR . "$file" ) ) ? self::delTree( "$dir" . DIRECTORY_SEPARATOR . "$file", true ) : unlink( "$dir" . DIRECTORY_SEPARATOR . "$file" );
