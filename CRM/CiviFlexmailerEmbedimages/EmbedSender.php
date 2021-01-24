@@ -231,12 +231,10 @@ class CRM_CiviFlexmailerEmbedimages_EmbedHTMLImages {
           $img_src = $image->getAttribute( 'src' );
           // create image URL parts
           $img_src_parts = parse_url( $img_src );
-          // if the query string is URL encoded, decode it (bug in Mosaico)
+          // if the query string is URL encoded, decode it to make the tracker path findable
           if ( array_key_exists('query', $img_src_parts)) {
             if ( false !== stripos( $img_src_parts[ 'query' ], "%2F" ) ) {
               $img_src_parts[ 'query' ] = urldecode( $img_src_parts[ 'query' ] );
-              $img_src = $img_src_parts[ 'scheme' ] . '://' . $img_src_parts[ 'host' ] . $img_src_parts[ 'path' ] . '?' . $img_src_parts[ 'query' ];
-              $image->setAttribute( 'src', $img_src );
             }
           } else {
             $img_src_parts[ 'query' ] = '';
