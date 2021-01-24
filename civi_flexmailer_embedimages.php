@@ -187,9 +187,6 @@ function civi_flexmailer_embedimages_civicrm_container( $container )
 
 function _civi_flexmailer_embedimages_send_batch( \Civi\FlexMailer\Event\SendBatchEvent $event)
 {
-  $line = "Listener _civi_flexmailer_embedimages_send_batch called";
-  $dt = new DateTime();
-  file_put_contents( '/var/www/vhosts/upgrade-jetzt.de/httpdocs/log/civi_flexmailer_embedimages.log',  "[" . $dt->format('Y-m-d\TH:i:s.u') . "] " . $line . "\n", FILE_APPEND | LOCK_EX );
   $EmbedSender = new CRM_CiviFlexmailerEmbedimages_EmbedSender();
   $EmbedSender->onSend( $event );
 }
