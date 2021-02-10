@@ -11,7 +11,7 @@ This plugin is one of the successors of the
 that is now split into three separate plugins:
 * [CiviCRM Mosaico Plugin Interface](https://github.com/skyslasher/de.ergomation.civi-mosaico-plugininterface)
 * CiviCRM Flexmailer Embed Images (this plugin)
-* WordPress CivCRM Mosaico Integration (in the works)
+* [WordPress CivCRM Mosaico Integration](https://github.com/skyslasher/wp-civi-mosaico)
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
