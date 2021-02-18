@@ -1,16 +1,16 @@
-# CiviCRM Flexmailer Embed Images Plugin
+# CiviCRM Flexmailer Embed Images Extension
 
-This plugin embeds images in HTML e-mails (HTML inline images) instead of linking to them.
+This [CiviCRM Extension](https://civicrm.org) embeds images in HTML e-mails (HTML inline images) instead of linking to them.
 CiviCRM trackers will be left untouched.
 This increases the e-mail size, but images are displayed images in the e-mail client right away,
 even when autoloading images is turned off on the client side (what is the new default setting nowadays).
 It also has the option to embed only locally hosted images, what can be useful for copyright reasons.
 
 This plugin is one of the successors of the
-[Wordpress integration for CiviMail with Mosaico plugin](https://github.com/skyslasher/de.ergomation.wp-civi-mosaico)
+[Wordpress integration for CiviMail with Mosaico Extension](https://github.com/skyslasher/de.ergomation.wp-civi-mosaico)
 that is now split into three separate plugins:
 * [CiviCRM Mosaico Plugin Interface](https://github.com/skyslasher/de.ergomation.civi-mosaico-plugininterface)
-* CiviCRM Flexmailer Embed Images (this plugin)
+* [CiviCRM Flexmailer Embed Images Extension](https://github.com/skyslasher/de.ergomation.civi-flexmailer-embedimages)
 * [WordPress CivCRM Mosaico Integration](https://github.com/skyslasher/wp-civi-mosaico)
 
 The extension is licensed under [AGPL-3.0](LICENSE.txt).
